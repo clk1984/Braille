@@ -1,7 +1,8 @@
 <?php
 
 require 'vendor/autoload.php';
-
+var_dump($_POST);
+exit;
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
 
