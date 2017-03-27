@@ -13,7 +13,11 @@
 	  	<img class="logo" src="./assets/images/Single bird.png">
 	  </div>
 	  <div class="mail "><button  type="button">mail</button></div>
-	  <div class="pdf "><button  class="pdf" type="button">pdf</button></div>
+	  <div class="pdf ">
+		<form action="./pdf.php" method='get'>
+	  	<button  class="df" type="submit">pdf</button>
+	  	</form>
+	  </div>
 </div>
 <div class="body">
 	<form action="./apiSoap.php" method="post">

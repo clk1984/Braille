@@ -36,28 +36,22 @@ $('#submit').on("click",function(event) {
 		});;
 	});
 })
-$('.pdf').on('click',function(event) {
-	event.preventDefault();
-$.get('./pdf.php', {param1: dataimages},{processData:false}, function(data, textStatus, xhr) {
+// $('.pdf').on('click',function(event) {
 
-});
-	// $.ajax({
-	// 	url: './pdf.php',
-	// 	type: 'POST',
- //                         processData: false,
- //             	data: {
- //             		da :dataimages
- //             	}
-	// })
-	// .done(function() {
-	// 	console.log("success");
-	// })
-	// .fail(function() {
-	// 	console.log("error");
-	// })
-	// .always(function() {
-	// 	console.log("complete");
-	// });
+// 	$.ajax({
+// 		url: './pdf.php',
+// 		type: 'POST',
+// 	})
+// 	.done(function(data) {
+// 		console.log(data);
+// 		console.log("success");
+// 	})
+// 	.fail(function() {
+// 		console.log("error");
+// 	})
+// 	.always(function() {
+// 		console.log("complete");
+// 	});
 
-});
+// });
 })
