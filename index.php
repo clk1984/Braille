@@ -12,10 +12,15 @@
 	  <div class="logo">
 	  	<img class="logo" src="./assets/images/Single bird.png">
 	  </div>
-	  <div class="mail "><button  type="button">mail</button></div>
+	  <div class="mail ">
+		  <form action="./mail.php" method="GET">
+		  <input type="text" name="correo">
+		  <button  type="submit">mail</button>
+		  </form>
+	  </div>
 	  <div class="pdf ">
-		<form action="./pdf.php" method='get'>
-	  	<button  class="df" type="submit">pdf</button>
+		<form action="./pdf.php" method='GET'>
+	  	<button  class="Pdf" type="submit">pdf</button>
 	  	</form>
 	  </div>
 </div>
