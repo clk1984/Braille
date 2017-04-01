@@ -1,6 +1,9 @@
 .buttons{
-  display: none;
+  /*display: none;*/
   border:0px;
+}
+#correo{
+  display: none;
 }
 .image{
       margin: 0 auto;
@@ -12,7 +15,28 @@
     border-radius: 1em;
     overflow-y: auto;
 }
+.center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+
+}
 .mail{
+background: #E1F0ED;
+  background-image: -webkit-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -moz-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -ms-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -o-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: linear-gradient(to bottom, #E1F0ED, #E1F0ED);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
 }
 .pdf{
     background: #E1F0ED;
@@ -36,8 +60,6 @@ html {
   box-sizing: border-box;
   font-family: 'Old Standard TT', serif;
 
-}
-.cajitas{
 }
 .bar {
   display: flex;

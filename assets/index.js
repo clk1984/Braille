@@ -31,27 +31,13 @@ $('#submit').on("click",function(event) {
 		var dataimage ='<img id="image "src="data:image/jpeg;base64,' + str + '">'
 		$('.image').empty();
 		$('.image').append(dataimage);
-		$('.buttons ').css({
-			display: 'flex',
-		});;
+
 	});
 })
-// $('.pdf').on('click',function(event) {
+$('.mail').click(function(event) {
+	event.preventDefault;
+	$('#instrucciones,.buttons').css('display', 'none');
+	$('#correo').css('display', 'inline');
+});
 
-// 	$.ajax({
-// 		url: './pdf.php',
-// 		type: 'POST',
-// 	})
-// 	.done(function(data) {
-// 		console.log(data);
-// 		console.log("success");
-// 	})
-// 	.fail(function() {
-// 		console.log("error");
-// 	})
-// 	.always(function() {
-// 		console.log("complete");
-// 	});
-
-// });
 })
