@@ -2,44 +2,57 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="./assets/index.css">
-
+<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 	<title>Braille</title>
 </head>
 <body>
 <div class="bar">
-	   <div class="icon icon-1"></div>
+
+	  <div >
+	  	<img class="logo" src="./assets/images/pajaro.png">
+	  </div>
+
+
+</div>
+	  <!--  <div class="icon icon-1"></div>
 	  <div class="icon icon-2"></div>
 	  <div class="logo">
-	  	<img class="logo" src="./assets/images/Single bird.png">
+	  	<img class="logo" src="./assets/images/pajaro.png">
 	  </div>
-	  <div class="mail ">
-		  <form action="./mail.php" method="GET">
-		  <input type="text" name="correo">
-		  <button  type="submit">mail</button>
-		  </form>
-	  </div>
-	  <div class="pdf ">
-		<form action="./pdf.php" method='GET'>
-	  	<button  class="Pdf" type="submit">pdf</button>
-	  	</form>
-	  </div>
-</div>
+	  -->
+	<div class="center">
+		<div class="buttons">
+			  <form action="./mail.php" method="GET">
+			  <input type="text" name="correo">
+			  <button  type="submit">mail</button>
+			  </form>
+		  </div>
+
+		<h1 id="instrucciones">Introduzca el texto que desea traducir a Braille</h1>
+		<div class="buttons">
+			<form action="./pdf.php" method='GET'>
+		  	<button  class="Pdf" type="submit">pdf</button>
+		  	</form>
+		  </div>
+
+	</div>
+	<hr>
 <div class="body">
-	<form action="./apiSoap.php" method="post">
-	     <div>
+	<form class="forms" action="./apiSoap.php" method="post">
+	     <div class="input cajitas">
 	        <label for="msg">Message:</label>
 	        <textarea id="msg" name="InText" id="InText"></textarea>
     	     </div>
-    	     <div class="button">
+    	     <div class="input ">
         		<button id="submit" type="button">Send your message</button>
     	    </div>
 	</form>
 
-</div>
-<div class="image">
-    <img src="" alt="" id="image">
-</div>
+		<div class="forms image cajitas ">
+		    <img src="" alt="" id="image">
+		</div>
 
+</div>
 <?php
 require 'vendor/autoload.php';
 ?>

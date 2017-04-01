@@ -31,8 +31,8 @@ $('#submit').on("click",function(event) {
 		var dataimage ='<img id="image "src="data:image/jpeg;base64,' + str + '">'
 		$('.image').empty();
 		$('.image').append(dataimage);
-		$('.mail,.pdf ').css({
-			display: 'inline',
+		$('.buttons ').css({
+			display: 'flex',
 		});;
 	});
 })

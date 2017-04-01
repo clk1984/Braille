@@ -1,28 +1,69 @@
+.buttons{
+  display: none;
+  border:0px;
+}
+.image{
+      margin: 0 auto;
+    width: 400px;
+    height:  200px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    overflow-y: auto;
+}
+.mail{
+}
+.pdf{
+    background: #E1F0ED;
+  background-image: -webkit-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -moz-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -ms-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: -o-linear-gradient(top, #E1F0ED, #E1F0ED);
+  background-image: linear-gradient(to bottom, #E1F0ED, #E1F0ED);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 html {
   box-sizing: border-box;
+  font-family: 'Old Standard TT', serif;
+
+}
+.cajitas{
 }
 .bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  width: 100%;
-  background: #eee;
+  justify-content: center;
+  background: #E5E5E2;
   padding: 20px;
+}
+.body{
+  margin-top:15px;
+  display: flex;
+  flex-direction: row;
+}
+#instrucciones{
+  text-align: center;
 }
 .search {
   flex: 1;
 }
 .logo{
-	width: 80px;
-	height: 80px;
+  align-content:center;
 }
-form {
-    /* Sólo para centrar el formulario a la página */
+.forms{
     margin: 0 auto;
     width: 400px;
-    /* Para ver el borde del formulario */
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
@@ -63,19 +104,4 @@ textarea {
     /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
         No funciona en todos los navegadores */
     resize: vertical;
-}
-.image{
-	    margin: 0 auto;
-    width: 400px;
-    /* Para ver el borde del formulario */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-
-}
-.mail{
-	display: none;
-}
-.pdf{
-	display: none;
 }
