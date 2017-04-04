@@ -1,10 +1,16 @@
 <?php
 require 'vendor/autoload.php';
+$im = "./".$_SESSION['file'];
 
-$data = Swift_Message::newInstance();
-echo '<pre>' . var_export($data, true) . '</pre>';
+/* Create the object and read the image in */
+$im = new Imagick($im);
 
+/* Trim the image. */
+$im->trimImage(0);
 
+/* Ouput the image */
+header("Content-Type: image/" . $im->getImageFormat());
+echo $im;
 
 ?>
 

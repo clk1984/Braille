@@ -15,12 +15,12 @@
 <div class="center">
 	<div class="buttons">
 			<!-- <input type="text" name="correo"> -->
-		  	<button  class="mail" type="submit">Enviarlo a mi correo</button>
+		  	<button  class="mail" type="submit" disabled="disabled">Enviarlo a mi correo</button>
 	  </div>
 	   <div id="correo">
 		   <form action="./mail.php" method="GET">
 		   	<input type="text" name="correo" value="Introduzca su correo" placeholder="Introduzca su correo">
-		   	<button  class="mail" type="submit">Enviar
+		   	<button  class="mail" type="submit" disabled="disabled">Enviar
 		   </form>
 	   </div>
 

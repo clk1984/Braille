@@ -25,13 +25,18 @@ function fetchBlob(uri, callback) {
 $(document).ready(function(){
 $('#submit').on("click",function(event) {
 	event.preventDefault();
+	if ($('#msg').val()=='') {
+		alert('Introduce un texto a traducir');
+	}
 	fetchBlob('./apiSoap.php', function(blob) {
 		// Array buffer to Base64:
 		var str = btoa(String.fromCharCode.apply(null, new Uint8Array(blob)));
 		var dataimage ='<img id="image "src="data:image/jpeg;base64,' + str + '">'
 		$('.image').empty();
 		$('.image').append(dataimage);
-
+		$('.mail,.pdf').prop({
+			'disabled': false
+		})
 	});
 })
 $('.mail').click(function(event) {

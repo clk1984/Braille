@@ -1,64 +1,57 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>pdftempalte</title>
-	<style type="text/css">
-	*, *:before, *:after {
-  box-sizing: inherit;
-}
-html {
-  box-sizing: border-box;
-}
-.bar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background: #eee;
-  padding: 20px;
-}
-.search {
-  flex: 1;
-}
-.logo{
-	width: 80px;
-	height: 80px;
-}
-.image{
-	    margin: 0 auto;
-    width: 400px;
-    /* Para ver el borde del formulario */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
-}
-	</style>
+  <link rel="stylesheet" type="text/css" href="./assets/pdftemplate.css">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+	<title>Braille</title>
 </head>
 <body>
-
-<?php
-$filename = $_SESSION["file"];
-
-$html =   '<img src="./'.$filename.'" >';
-?>
 <div class="bar">
-	   <div class="icon icon-1"></div>
-	  <div class="icon icon-2"></div>
-	  <div class="logo">
-	  	<img class="logo" src="./assets/images/Single bird.png">
+	  <div>
+	  	<img class="logo" src="./assets/images/pajaro.png">
 	  </div>
-	  <div class="mail "></button></div>
-	  <div class="pdf "></div>
-</div>
-
-<div class="image">
-<?php echo $html; ?>
-
 </div>
 
 
+	<h1  id="instrucciones">Esta es la traduccion del texto que solicito</h1>
 
+
+<hr>
+<div class="container2">
+	<img class="traduccion"src="<?php echo $filename;?>">
+</div>
+<hr>
+<div class="container">
+
+	<h1>Texto original</h1>
+	<p><?php  echo $texto; ?></p>
+</div>
+	<!-- <table border="0" >
+	<tr>
+	<th>Texto original</th>
+	<th>Traduccion</th>
+	</tr>
+	<tr>
+	<td><?php  echo $texto; ?></td>
+	<td><img class="traduccion"src="<?php echo $filename;?>"></td>
+	</tr>
+	</table>
+	 --><!-- <div class="row">
+	     <div class="col-md-6">
+	        <label for="msg">Texto Original</label>
+	        <p><?php  echo $texto; ?></p>
+    	     </div>
+
+	      <div class="col-md-6">
+		<img src="<?php echo $filename;?>">
+	      </div>
+	 </div> -->
+<?php
+require 'vendor/autoload.php';
+?>
 </body>
 </html>
