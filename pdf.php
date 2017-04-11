@@ -1,8 +1,24 @@
 <?php
 
+session_start();
 
 require 'vendor/autoload.php';
 use Dompdf\Dompdf;
+
+$im = "./".$_SESSION['file'];
+
+/* Create the object and read the image in */
+$im = new Imagick($im);
+//resize the image
+$im->adaptiveResizeImage(700,800,true);
+/* Trim the image. */
+$im->trimImage(0);
+
+$fp = fopen($_SESSION['file'], 'w');
+fwrite($fp, $im);
+fclose($fp);
+// echo $im;
+// exit;
  $html ='./pdftemplate.php';
 function renderToPDF($templateFile)
 {
@@ -25,22 +41,4 @@ $filename =$_SESSION['file'];
 renderToPDF($html);
 
 
-// $dompdf = new DOMPDF();
-// $dompdf->load_html($content);
-// $dompdf->render();
-// $dompdf->stream("output.pdf");
-
-// instantiate and use the dompdf class
-
-// $dompdf = new Dompdf();
-// $dompdf->loadHtml($html);
-
-// // (Optional) Setup the paper size and orientation
-// $dompdf->setPaper('A4', 'landscape');
-
-// // Render the HTML as PDF
-// $dompdf->render();
-
-// // Output the generated PDF to Browser
-// $dompdf->stream("$filename");
  ?>

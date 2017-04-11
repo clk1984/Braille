@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $url = 'http://www.webservicex.net/braille.asmx?WSDL';
 $parametros=array(); //parametros de la llamada
  $parametros['InText'] = htmlspecialchars($_POST['InText']);

@@ -44,5 +44,4 @@ $('.mail').click(function(event) {
 	$('#instrucciones,.buttons').css('display', 'none');
 	$('#correo').css('display', 'inline');
 });
-
 })
