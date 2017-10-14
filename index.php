@@ -20,8 +20,8 @@
 	   <div id="correo">
 		    <iframe name="votar" style="display:none;"></iframe>
 		   <form action="./mail.php" method="POST" target="votar">
-		   	<input type="text" name="correo" value="Introduzca su correo" placeholder="Introduzca su correo">
-		   	<button  class="mailsend" type="submit" >Enviar
+		   	<input type="text" name="correo" value="No disponible en este momento" placeholder="No disponible en este momento">
+		   	<button  class="mailsend" type="submit" disabled>Enviar
 		   </form>
 	   </div>
 
@@ -39,11 +39,11 @@
 <div class="body">
 	<form class="forms" action="./apiSoap.php" method="post">
 	     <div class="input cajitas">
-	        <label for="msg">Message:</label>
+	        <label for="msg">Texto</label>
 	        <textarea id="msg" name="InText" id="InText"></textarea>
     	     </div>
     	     <div class="input ">
-        		<button id="submit" type="button">Send your message</button>
+        		<button id="submit" type="button">Introduzaca el texto</button>
     	    </div>
 	</form>
 

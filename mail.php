@@ -41,11 +41,11 @@ $mail=$_POST['correo'];
 // Sendmail
 $transport = Swift_SendmailTransport::newInstance('/usr/sbin/sendmail -bs');
 $message = Swift_Message::newInstance()
-    ->setSubject('Su traduccion de braille.com')
-    ->setFrom(array('admin@braille.top' => 'Braille'))
-   ->setTo($mail)
+     ->setSubject('Su traduccion de braille.com')
+     ->setFrom(array('admin@braille.top' => 'Braille'))
+    ->setTo($mail)
     ->setBody('Adjuntamos la traduccion echa en braille.top')
-     ->attach(Swift_Attachment::fromPath($_SESSION['pdfPath']));
+    ->attach(Swift_Attachment::fromPath($_SESSION['pdfPath']));
 
 
 // Create the Mailer using your created Transport
