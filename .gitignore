@@ -1,2 +1,4 @@
-.tmp/
-.phpintel/
+/.tmp
+/.phpintel
+composer.lock
+/vendor
